@@ -1,51 +1,68 @@
-# Hello World with Vanilla JS
+<!-- hide -->
+# The Excuse Generator
+<!-- endhide -->
 
-Start coding a JS/HTML/CSS website in 30 seconds by opening this template in codespaces or [gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git).
+Disneyland for procrastinators and lazy people. 
 
-## Before you being
+This project is ideal for avoiding someone annoying, it takes no more than 20 lines of code and it can save you for the rest of your life!
 
-Install the packages by typing: `npm install`.
+## The Goal
 
+We wanted a project that uses very little Javascript but still with a very fun application. The excuse generator takes
+20 lines of code, is super simple to understand and is the perfect first project for any beginner developer.
 
-### How do I run my website to see live changes?  
+## Instructions
 
+Please create a small website that generates an excuse each time a button is pressed, it has to look like this: [Checkout the demo animation](https://github.com/breatheco-de/tutorial-project-excuse-generator-javascript/blob/master/preview.gif?raw=true).
 
-Type on the command line `$ npm run start` and type localhost on the browser.
+## Discuss with your classmates the strategy first
 
-### Where do I write my code?  
+How can we generate an excuse? How are sentences build?
 
-It depends on the language, but you have `./src/js/app.js`, `./src/style/index.css` and `./isrc/index.html` respectively, you can add new `.html` as you please, just make sure to include import it on the index.js.
+![Excuse generator explanation](https://github.com/breatheco-de/tutorial-project-excuse-generator-javascript/blob/master/explanation.gif?raw=true)
 
-> Note: remember that the JS workflow starts inside `window.onload`.
+The idea is to generate each part of the sentence randomly to come up with great excuses!
 
+## 🌱  How to start this project
 
-## Troubleshooting
+Do not clone this repository.
 
-### I don't see my changes...
+The first step to start coding is cloning the [vanillajs boilerplate](https://github.com/4GeeksAcademy/vanillajs-hello) on your local computer or gitpod.
 
-Everytime you change any file inside the `./src` folder the website public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (command+shift+r on mac, control+shift+r on pc & linux)
+a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://github.com/4GeeksAcademy/vanillajs-hello).  
+b) If working locally type the following command from your command line: `git clone https://github.com/4GeeksAcademy/vanillajs-hello`.  
 
-### How do I include more images on my project?
+💡 Important: Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
 
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
+## Hint
 
-### How do I include more JS files?
-
-Just add the files into the JS folder and import the file/variables into your index.js. E.g: `import myVar from "./file2.js"`
-
-### How do I publish the website?
-
-This boilerplate is 100% compatible with the free github pages hosting. Publish your website by running:
-
-```sh
-$ npm run deploy
+1. Update your index.html with one excuse hard-coded, no js, just one excuse in pure plain HTML.
+2. The excuse must be inside an HTML tag that has an id assigned, for example:
+```html
+  <p id="excuse">My dog ate my homework</p>
 ```
+3. Using javascript, create a function that generates and returns a random excuse with the following structure:
+```js
+let who = ['The dog','My grandma','His turtle','My bird'];
+let action = ['ate','peed','crushed','broke'];
+let what = ['my homework', 'the keys', 'the car'];
+let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+```
+4. To create a consistent excuse you have to concatenate one item from each array in the proper order.
+5. Call that function onLoad and set the excuse into the innerHTML of the #excuse HTML element.
 
-Very easy and in just one step!  Push to your __main__ branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
 
-### Contributors
+## Technologies
 
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/vanillajs-hello/graphs/contributors).
+HTML, CSS3, Javascript, Webpack.
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+## Fundamentals
+
+This exercise covers the following fundamentals:
+
+1. Using external Javascript files in your project.
+2. How to work with Arrays.
+3. Generating random numbers.
+4. Concatenating strings.
+5. Using functions (at least a bit).
+6. Working with events (at least a bit).
